@@ -8,7 +8,7 @@
     <form action="{{ route('produto.index')}}" method="GET">
         <input type="text" name="pesquisar" placeholder="Digite o nome"/>  
         <button class=" btn btn-primary">Pesquisar</button> 
-        <a href="" type="button" class="btn btn-success float-end">Incluir</a>
+        <a href="{{route('cadastrar.produto')}}" type="button" class="btn btn-success float-end">Incluir</a>
     </form>
     <div class="table-responsive small mt-4">
         @if ($findProduto->isEmpty())
