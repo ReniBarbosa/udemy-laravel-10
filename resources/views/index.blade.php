@@ -6,26 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
-    <title>Gestão</title>
-        
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Gestao</title>
+
     @yield('styles')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <!-- Custom styles for this template -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}" sizes="180x180">
-    <link rel="icon" href="{{ asset('icons/favicon-32x32.png') }}" sizes="32x32" type="image/png">
-    <link rel="icon" href="{{ asset('icons/favicon-16x16.png') }}" sizes="16x16" type="image/png">
-    <link rel="manifest" href="{{ asset('icons/manifest.json') }}">
-    <link rel="mask-icon" href="{{ asset('icons/safari-pinned-tab.svg') }}" color="#712cf9">
-    <link rel="icon" href="{{ asset('icons/favicon.ico') }}">
-    <meta name="theme-color" content="#712cf9">
+    <link rel="apple-touch-icon" href=" {{ asset('icones/apple-touch-icon.png') }}" sizes="180x180">
+    <link rel="icon" href=" {{ asset('icones/favicon-32x32.png') }}" sizes="32x32" type="image/png">
+    <link rel="icon" href=" {{ asset('icones/favicon-16x16.png') }}" sizes="16x16" type="image/png">
+    <link rel="manifest" href="{{ asset('icones/manifest.json') }}">
+    <link rel="mask-icon" href="{{ asset('icones/safari-pinned-tab.svg') }}" color="#712cf9">
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
+    <meta name="theme-color" content="#712cf9">
 
  
     <style>

@@ -29,9 +29,10 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
 
 $('#mascara_valor').mask('#.##0,00', { reverse: true });
 
+
 $("#cep").blur(function () {
     var cep = $(this).val().replace(/\D/g, '');
-    if (cep != "") {
+    if (cep != "") {      
         var validacep = /^[0-9]{8}$/;
         if (validacep.test(cep)) {
             $("#logradouro").val("");
