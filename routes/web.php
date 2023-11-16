@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\VendaController;
 use App\Models\Venda;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +20,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 });
 
 http: //localhost:8989/produtos
 Route::prefix('produtos')->group(function () {
-   
     Route::get('/',[ProdutosController::class,'index'])->name('produto.index');
     /*Cadastrar*/ 
     Route::get('/cadastrarProduto',[ProdutosController::class,'cadastrarProduto'])->name('cadastrar.produto');
@@ -56,4 +58,10 @@ Route::prefix('vendas')->group(function () {
     Route::get('/cadastrarVenda', [VendaController::class, 'cadastrarVendas'])->name('cadastrar.venda');
     Route::post('/cadastrarVenda', [VendaController::class, 'cadastrarVendas'])->name('cadastrar.venda');
     Route::get('/enviaComprovantePorEmail/{id}', [VendaController::class, 'enviaComprovantePorEmail'])->name('enviaComprovantePorEmail.venda');
+});
+
+Route::prefix('usuario')->group(function () {
+    
+    Route::get('/',[UsuarioController::class,'index'])->name('usuario.index');
+    
 });
