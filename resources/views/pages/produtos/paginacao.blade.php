@@ -5,10 +5,10 @@
     <h1 class="h2">Produtos</h1>
 </div>
 <div>
-    <form action="{{ route('produto.index')}}" method="GET">
+    <form action="{{ route('usuario.index')}}" method="GET">
         <input type="text" name="pesquisar" placeholder="Digite o nome"/>  
         <button class=" btn btn-primary">Pesquisar</button> 
-        <a href="{{route('cadastrar.produto')}}" type="button" class="btn btn-success float-end">Incluir</a>
+        <a href="{{route('cadastrar.usuario')}}" type="button" class="btn btn-success float-end">Incluir</a>
     </form>
     <div class="table-responsive small mt-4">
         @if ($findProduto->isEmpty())
@@ -29,11 +29,11 @@
                     <td>{{$produto->nome}}</td>
                     <td>{{'R$'.''.number_format($produto->valor, 2, ',','.')}}</td>
                     <td>
-                        <a href="{{ route('atualizar.produto',$produto->id)}}" class="btn btn-primary btn-sm">
+                        <a href="{{ route('atualizar.usuario',$produto->id)}}" class="btn btn-primary btn-sm">
                             Editar
                         </a>
                         <meta name="csrf-token" content="{{csrf_token()}}">
-                        <a onclick="deleteRegistroPaginacao('{{route('produto.delete')}}',{{$produto->id}})" class="btn btn-danger btn-sm">Excluir</a>
+                        <a onclick="deleteRegistroPaginacao('{{route('usuario.delete')}}',{{$produto->id}})" class="btn btn-danger btn-sm">Excluir</a>
                     </td>                
                 </tr>                    
                 @endforeach

@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Usuario Cadastrados</h5>
                     <p class="card-text">Total de Usuario cadastradas</p>
-                    <a href="#" class="btn btn-primary"> </a>
+                    <a href="#" class="btn btn-primary"> {{ $totalDeUsuarioCadastrado }}</a>
                 </div>
             </div>
         </div>
